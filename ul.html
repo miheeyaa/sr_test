@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린리더 테스트용</title>
+    <style>
+    .sr_only{}
+    ul, li{list-style: none;}
+    .test li {display: inline-block;}
+    </style>
+</head>
+<body>
+    <h1>span 테스트</h1>
+    <h2>보기 1.</h2>
+    <div>
+        <strong>ID</strong><span>케빈</span>
+        <strong>이메일</strong><span>test@daum.net</span>
+    </div>
+
+    <h2>보기 2.</h2>
+    <div>
+        <strong>ID</strong> <span>케빈, </span>
+        <strong>이메일</strong> <span>test@daum.net</span>
+    </div>
+    
+    <h2>보기 3.</h2>
+    <ul>
+        <li><strong>ID</strong> <span>케빈</span></li>
+        <li><strong>이메일</strong> <span>test@daum.net</span></li>
+    </ul>
+
+    <h2>보기 4.</h2>
+    <ul class="test">
+        <li><strong>ID</strong> <span>케빈</span></li>
+        <li><strong>이메일</strong> <span>test@daum.net</span></li>
+    </ul>
+
+    <h2>보기 5.</h2>
+    <dl>
+        <dt>ID</dt>
+        <dd>케빈</dd>
+        <dt>이메일</dt>
+        <dd>test@daum.net</dd>
+    </dl>
+    
+    <img src="img/images.jpg" alt="씨익">
+</body>
+</html>
