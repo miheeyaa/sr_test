@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table id, headers 테스트</title>
+    <link rel="stylesheet" href="https://t1.daumcdn.net/top/modoo-web/20220531_135158/build/app.css">
+    <style>
+        th{background-color: aqua;}
+    </style>
+</head>
+<body>
+    <table border="1">
+        <caption>간이 테스트용</caption>
+        <tr>
+            <th id="t1">시간</th>
+            <th id="t2">7시</th>
+            <th id="t3">8시</th>
+        </tr>
+        <tr>
+            <th id="tit1">구간</th>
+            <td headers="t1 tit1">1</td>
+            <td headers="t2 tit1">2</td>
+        </tr>
+        <tr>
+            <th id="tit2">몰라</th>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+
+
+    <div class="time_tbl_box">
+        <div class="fake_head" aria-hidden="true">
+            <div class="txt_tit">시간</div> 
+            <div class="txt_tit">8회 지선</div>
+            <div class="txt_tit">20대 대선</div>
+            <div class="txt_tit">7회 지선</div>
+        </div> 
+        <div class="wrap_tbl">
+           
+
+            <table class="tbl_time">
+                <caption class="ir_caption">지난 선거 시간별 투표율</caption>
+                <colgroup>
+                    <col class="screen_out"><col><col><col><col><col><col><col><col><col><col><col><col><col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="screen_out">시간</span></th>
+                        <th id="time07" >7시</th>
+                        <th id="time08" >8시</th>
+                        <th id="time09" >9시</th>
+                        <th id="time10" >10시</th>
+                        <th id="time11" >11시</th>
+                        <th id="time12" >12시</th>
+                        <th id="time13" >13시</th>
+                        <th id="time14" >14시</th>
+                        <th id="time15" >15시</th>
+                        <th id="time16" >16시</th>
+                        <th id="time17" >17시</th>
+                        <th id="time18" >18시</th>
+                        <th id="time19" >19시</th>
+                    </tr>
+                    <tr>
+                        <th id="election01"><span class="screen_out">8회 지방선거</span></th>
+                        <td headers="election01 time07">0.9 <span class="screen_out">%</span></td>
+                        <td headers="election01 time08">2.2 <span class="screen_out">%</span></td>
+                        <td headers="election01 time09">3.5 <span class="screen_out">%</span></td>
+                        <td headers="election01 time10">5.8 <span class="screen_out">%</span></td>
+                        <td headers="election01 time12">8.6 <span class="screen_out">%</span></td>
+                        <td headers="election01 time13">11.5 <span class="screen_out">%</span></td>
+                        <td headers="election01 time14">41.2 <span class="screen_out">%</span></td>
+                        <td headers="election01 time15">43.8 <span class="screen_out">%</span></td>
+                        <td headers="election01 time16">46.6 <span class="screen_out">%</span></td>
+                        <td headers="election01 time17">48.8 <span class="screen_out">%</span></td>
+                        <td headers="election01 time18">50.9 <span class="screen_out">%</span></td>
+                        <td headers="election01 time19">52.1 <span class="screen_out">%</span></td>
+                        <td headers="election01 time20" class="current_on lst">53.8 <span class="screen_out">%</span></td>
+                    </tr>
+                    <tr>
+                        <th id="election02"><span class="screen_out">20대 대선</span></th>
+                        <td headers="election02 time07">2.1</td>
+                        <td headers="election02 time08">5.0</td>
+                        <td headers="election02 time09">8.1</td>
+                        <td headers="election02 time10">11.8</td>
+                        <td headers="election02 time12">16.0</td>
+                        <td headers="election02 time13">20.3</td>
+                        <td headers="election02 time14">61.3</td>
+                        <td headers="election02 time15">64.8</td>
+                        <td headers="election02 time16">68.1</td>
+                        <td headers="election02 time17">71.1</td>
+                        <td headers="election02 time18">73.6</td>
+                        <td headers="election02 time19">75.7</td>
+                        <td headers="election02 time20" class="lst">77.1</td>
+                    </tr>
+                    <tr>
+                        <th id="election03"><span class="screen_out">7회 지방선거</span></th>
+                        <td headers="election03 time07">2.2</td>
+                        <td headers="election03 time08">4.6</td>
+                        <td headers="election03 time09">7.7</td>
+                        <td headers="election03 time10">11.5</td>
+                        <td headers="election03 time12">15.7</td>
+                        <td headers="election03 time13">19.7</td>
+                        <td headers="election03 time14">43.5</td>
+                        <td headers="election03 time15">46.8</td>
+                        <td headers="election03 time16">50.1</td>
+                        <td headers="election03 time17">53.2</td>
+                        <td headers="election03 time18">56.1</td>
+                        <td headers="election03 time19" class="lst">60.2</td>
+                        <td headers="election03 time20"></td>
+                    </tr>
+                </tbody>
+                </table>
+                </div>
+        </div>
+
+
+    <div class="time_tbl_box" style="display: none;">
+        <div class="fake_head" aria-hidden="true">
+            <div class="txt_tit">시간</div> 
+            <div class="txt_tit">8회 지선</div>
+            <div class="txt_tit">20대 대선</div>
+            <div class="txt_tit">7회 지선</div>
+        </div> 
+        <div class="wrap_tbl">
+            <table class="tbl_time">
+                <caption class="ir_caption">지난 선거 시간별 투표율</caption>
+                <colgroup>
+                    <col class="screen_out"><col><col><col><col><col><col><col><col><col><col><col><col><col>
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th><span class="screen_out">시간</span></th>
+                        <th scope="col">7시</th>
+                        <th scope="col">8시</th>
+                        <th scope="col">9시</th>
+                        <th scope="col">10시</th>
+                        <th scope="col">11시</th>
+                        <th scope="col">12시</th>
+                        <th scope="col">13시</th>
+                        <th scope="col">14시</th>
+                        <th scope="col">15시</th>
+                        <th scope="col">16시</th>
+                        <th scope="col">17시</th>
+                        <th scope="col">18시</th>
+                        <th scope="col">19시</th>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="screen_out">8회 지방선거</span></th>
+                        <td>0.9 <span class="screen_out">%</span></td>
+                        <td>2.2 <span class="screen_out">%</span></td>
+                        <td>3.5 <span class="screen_out">%</span></td>
+                        <td>5.8 <span class="screen_out">%</span></td>
+                        <td>8.6 <span class="screen_out">%</span></td>
+                        <td>11.5 <span class="screen_out">%</span></td>
+                        <td>41.2 <span class="screen_out">%</span></td>
+                        <td>43.8 <span class="screen_out">%</span></td>
+                        <td>46.6 <span class="screen_out">%</span></td>
+                        <td>48.8 <span class="screen_out">%</span></td>
+                        <td>50.9 <span class="screen_out">%</span></td>
+                        <td>52.1 <span class="screen_out">%</span></td>
+                        <td class="current_on lst">53.8 <span class="screen_out">%</span></td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="screen_out">20대 대선</span></th>
+                        <td>2.1</td>
+                        <td>5.0</td>
+                        <td>8.1</td>
+                        <td>11.8</td>
+                        <td>16.0</td>
+                        <td>20.3</td>
+                        <td>61.3</td>
+                        <td>64.8</td>
+                        <td>68.1</td>
+                        <td>71.1</td>
+                        <td>73.6</td>
+                        <td>75.7</td>
+                        <td class="lst">77.1</td>
+                    </tr>
+                    <tr>
+                        <th scope="row"><span class="screen_out">7회 지방선거</span></th>
+                        <td>2.2</td>
+                        <td>4.6</td>
+                        <td>7.7</td>
+                        <td>11.5</td>
+                        <td>15.7</td>
+                        <td>19.7</td>
+                        <td>43.5</td>
+                        <td>46.8</td>
+                        <td>50.1</td>
+                        <td>53.2</td>
+                        <td>56.1</td>
+                        <td class="lst">60.2</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+                </table>
+                </div>
+        </div>
+</body>
+</html>
