@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>toggle demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+  <!-- <link href="https://cs.kakao.com/css/m_common_0616.css" rel="stylesheet"> -->
+  <style>
+.btn_wrap{margin:5px;}
+.smp_btn{border: 1px solid #666; margin: 0 2px; padding: 4px; background: #eee; border-radius: 3px}
+.error_toast {width: 250px;height: 20px; height:auto; position: fixed; left: 50%;margin-left:-125px; bottom: 100px; z-index: 9999; background-color: #383838; color: #F0F0F0; font-size: 15px; padding: 10px; text-align:center; border-radius: 2px;}
+.dimmed_layer{height:100%;background:rgba(0,0,0,0.5);}
+.comm_layer{display:none;position:fixed;top:0;bottom:0;right:0;left:0;z-index:1000;}
+.comm_layer.service_layer{display:block;}
+.popup_layer{position:absolute;bottom:0;left:0;right:0;height:356px;border-top-left-radius:12px;border-top-right-radius:12px;background-color:#fff;}
+.popup_layer.scroll{height:calc(100% - 55px);}
+.popup_layer .scroll_bar{width:31px;height:4px;margin:6px auto;border-radius:5px;background-color:#EBEBEB;}
+.popup_layer .layer_head{padding:8px 0 7px;text-align:center;}
+.popup_layer .tit_cont{font-size:17px;}
+
+
+  </style>
+</head>
+<body class="dimmed_open"> 
+<div class="btn_wrap">
+    <button class="smp_btn smp">모달 테스트</button>
+    <button class="smp_btn smp2">토스트 팝업 (기본)</button>
+    <button class="smp_btn smp3">토스트 팝업 (role=alert)</button>
+    <button class="smp_btn smp4">토스트 팝업 (aria-live)</button>
+</div>    
+ 
+<!-- 모달 하프뷰 테스트 - dimmd 영역을 닫기 버튼으로 활용 -->
+<div class="comm_layer " id="serviceModal">
+    <div class="dimmed_layer" tabindex="0" aria-label="서비스 선택 닫기"  ></div>
+    <div class="popup_layer" role="dialog">
+        <div class="scroll_bar"></div>
+        <div class="layer_head">
+            <a href="javascript:void(0);">
+                <strong class="tit_cont">서비스 선택</strong>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- 토스트 팝업 (기본), 토스트 팝업 (role=alert) -->
+<div class='error_toast error' style='display:none'>잠깐만, 잊지 마세요! </div>
+
+<!-- 토스트 팝업 (aria-live) -->
+<div class='error_toast error3' style='display:none' aria-live="assertive">요건, 실시간 알림! </div>
+
+<!-- <div>
+    <dl class="info_inquiry">
+        <dt>
+            <label class="lab_info" for="email">이메일 주소
+                <span class="txt_red"> *</span>
+            </label>
+        </dt>
+        <dd>
+            <div class="wrap_item wrap_focus">
+                <input type="text" id="email" name="email" class="inp_info error" autocomplete="off" placeholder="example@kakao.com" value="theleck@naver.com" aria-required="true" aria-invalid="true">
+                <span class="ico_cs ico_reset">취소</span>
+            </div>
+            <span class="txt_error">형식에 맞지 않는 e-mail 주소입니다.</span>
+        </dd>
+    </dl>
+</div> -->
+
+
+
+<script>
+    $( ".smp" ).click(function() {
+      $(".comm_layer").addClass('service_layer');
+    });
+     // 서비스 전체보기 레이어 닫기
+     $('.dimmed_layer').on('click', function (e) {
+        $(this).parent().removeClass('service_layer');
+    });
+
+
+    $( ".smp2" ).click(function() {
+        $('.error').fadeIn(400).delay(3000).fadeOut(400).removeAttr('role','alert');//fade out after 3 seconds
+
+    });
+    $( ".smp3" ).click(function() {
+        $('.error').fadeIn(400).delay(3000).fadeOut(400).attr('role','alert');        
+    });
+
+    $( ".smp4" ).click(function() {
+        $('.error3').fadeIn(400).delay(3000).fadeOut(400).removeAttr('role','alert');
+
+    });
+</script>
+ 
+</body>
+</html>
