@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>탭 테스트</title>
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -17,13 +17,29 @@
 <body>
  
 <div id="tabs">
-  <ul>
+  <!-- <strong  class="screen_out">랭킹 성별 선택</strong> -->
+  <ul aria-label="랭킹 카테고리1 선택">
     <li><a href="#tabs-1">모두가</a></li>
     <li><a href="#tabs-2">여성이</a></li>
     <li><a href="#tabs-3">남성이</a></li>
   </ul>
+  <!-- <strong  class="screen_out">랭킹 카테고리2 선택</strong> -->
+<ul role="tablist" class="tablist_cate_pick" >
+    <li _ngcontent-fen-c115="" role="presentation" class=""><button _ngcontent-fen-c115="" type="button" role="tab"
+            class="btn_tab" aria-selected="false"> 많이 선물한 </button></li>
+    <li _ngcontent-fen-c115="" role="presentation" class=""><button _ngcontent-fen-c115="" type="button" role="tab"
+            class="btn_tab" aria-selected="false"> 받고 싶어한 </button></li>
+    <li _ngcontent-fen-c115="" role="presentation" class="on"><button _ngcontent-fen-c115="" type="button" role="tab"
+            class="btn_tab" aria-selected="true"> 위시로 받은 </button></li>
+    <!---->
+</ul>
+<strong _ngcontent-fen-c115="" class="screen_out">상품 가격대 선택</strong>
+<div _ngcontent-fen-c115="" class="wrap_tablist_price"><ul _ngcontent-fen-c115="" role="tablist" class="tablist_price list_slide"><li _ngcontent-fen-c115="" role="presentation" class="on"><button _ngcontent-fen-c115="" type="button" role="tab" class="btn_tab" aria-selected="true"> 1만원 미만 </button></li><li _ngcontent-fen-c115="" role="presentation"><button _ngcontent-fen-c115="" type="button" role="tab" class="btn_tab" aria-selected="false"> 1-2만원대 </button></li><li _ngcontent-fen-c115="" role="presentation"><button _ngcontent-fen-c115="" type="button" role="tab" class="btn_tab" aria-selected="false"> 3-4만원대 </button></li><li _ngcontent-fen-c115="" role="presentation"><button _ngcontent-fen-c115="" type="button" role="tab" class="btn_tab" aria-selected="false"> 5만원 이상 </button></li><!----></ul><span _ngcontent-fen-c115="" class="ico_main ico_gradation"></span><!----></div>
+
+
   <div id="tabs-1">
-    <p>제품록록 - 모두가</p>
+    <strong _ngcontent-fen-c115="" class="screen_out">랭킹 리스트</strong>
+    <ol _ngcontent-fen-c115="" data-tiara-layer="item" class="list_gift_ranking"><li _ngcontent-fen-c115=""><gl-link _ngcontent-fen-c115="" _nghost-fen-c63=""><a _ngcontent-fen-c63="" class="card_product photo_left" href="/product/3818654"><span _ngcontent-fen-c115="" class="wrap_thumb"><img _ngcontent-fen-c115="" class="img_g" src="https://img1.kakaocdn.net/thumb/C180x180.fwebp.q82/?fname=https%3A%2F%2Fst.kakaocdn.net%2Fproduct%2Fgift%2Fproduct%2F20220107172532_8a6336605bf447bd8632fe6d72b8d7d9.jpg" alt="아이스 카페 아메리카노 T"></span><span _ngcontent-fen-c115="" class="wrap_info"><span _ngcontent-fen-c115="" class="screen_out">랭킹</span><strong _ngcontent-fen-c115="" class="txt_ranking">1</strong><span _ngcontent-fen-c115="" class="screen_out">브랜드명</span><span _ngcontent-fen-c115="" class="txt_brand">스타벅스</span><span _ngcontent-fen-c115="" class="screen_out">상품명</span><em _ngcontent-fen-c115="" class="txt_product">아이스 카페 아메리카노 T</em><span _ngcontent-fen-c115="" class="screen_out">가격</span><strong _ngcontent-fen-c115="" class="txt_price">4,500<span _ngcontent-fen-c115="" class="txt_won">원</span></strong></span><!----></a><!----><!----><!----><!----><!----><!----><!----><!----></gl-link></li></ol>
   </div>
   <div id="tabs-2">
     <p>제품록록 - 여성이</p>
