@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input 요소</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    <style>
+        .btn_wrap{position: fixed; top:10px; right: 10px; width: 180px;padding:7px;background: rgba(0,0,0,.4);}
+        .smp_btn{margin: 4px;}
+        .el_code{margin: 0.5em 0 0.2em;background: #eee;}
+    </style>
+</head>
+<body>
+    <div class="btn_wrap">
+        <button class="smp_btn smp">HTML 요소만 테스트하기</button>
+        <button class="smp_btn smp1">초기화</button>
+    </div>  
+<div class="el_code"><code>type="button"</code></div> <!-- aria-hidden="true" optional 만들 수 있겠다 --> 
+<input type="button">
+<div class="el_code"><code>type="checkbox"</code></div>
+<input type="checkbox">
+<div class="el_code"><code>type="color"</code></div>
+<input type="color">
+<div class="el_code"><code>type="date"</code></div>
+<input type="date">
+<div class="el_code"><code>type="datetime-local"</code></div>
+<input type="datetime-local">
+<div class="el_code"><code>type="email"</code></div>
+<input type="email">
+<div class="el_code"><code>type="file"</code></div>
+<input type="file">
+<div class="el_code"><code>type="hidden"</code></div>
+<input type="hidden">
+<div class="el_code"><code>type="image"</code></div>
+<input type="image">
+<div class="el_code"><code>type="month"</code></div>
+<input type="month">
+<div class="el_code"><code>type="number"</code></div>
+<input type="number">
+<div class="el_code"><code>type="password"</code></div>
+<input type="password">
+<div class="el_code"><code>type="button"</code></div>
+<input type="radio">
+<div class="el_code"><code>type="range"</code></div>
+<input type="range">
+<div class="el_code"><code>type="reset"</code></div>
+<input type="reset">
+<div class="el_code"><code>type="search"</code></div>
+<input type="search">
+<div class="el_code"><code>type="submit"</code></div>
+<input type="submit">
+<div class="el_code"><code>type="tel"</code></div>
+<input type="tel">
+<div class="el_code"><code>type="text"</code></div>
+<input type="text">
+<div class="el_code"><code>type="time"</code></div>
+<input type="time">
+<div class="el_code"><code>type="url"</code></div>
+<input type="url">
+<div class="el_code"><code>type="week"</code></div>
+<input type="week">
+
+<script>
+    $( ".smp" ).click(function() {
+      $(".el_code").attr('aria-hidden','true');
+    })
+    $( ".smp1" ).click(function() {
+      $(".el_code").removeAttr('aria-hidden','true');
+    })
+</script>
+</body>
+</html>
